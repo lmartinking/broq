@@ -7,11 +7,15 @@ CFLAGS_64 := -m64
 CFLAGS_M := -bundle -undefined dynamic_lookup
 CFLAGS_L := -shared -fPIC
 
-LIBBROTLIDEC_CFLAGS := -O2
+LIBBROTLIDEC_CFLAGS := -O2 -fPIC
 LIBBROTLIDEC_32 := libbrotlidec_32.a
 LIBBROTLIDEC_64 := libbrotlidec_64.a
 
-libbrotli/Makefile:
+libbrotli/autogen.sh:
+	git submodule init
+	git submodule update
+
+libbrotli/Makefile: libbrotli/autogen.sh
 	cd libbrotli && ./autogen.sh && ./configure
 
 $(LIBBROTLIDEC_32): libbrotli/Makefile
