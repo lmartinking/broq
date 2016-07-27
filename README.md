@@ -15,3 +15,7 @@ q) broqdec: `broq 2: (`broqdec;1)
 q) dec: broqdec `:/path/to/file.bro
 
 Currently supports extracting by file path only.
+
+# Licence
+
+MIT. (See `LICENCE`).
