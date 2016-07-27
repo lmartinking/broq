@@ -1,0 +1,3 @@
+[submodule "libbrotli"]
+	path = libbrotli
+	url = https://github.com/bagder/libbrotli.git
