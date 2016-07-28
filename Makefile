@@ -5,7 +5,7 @@ CFLAGS_32 := -m32
 CFLAGS_64 := -m64
 
 CFLAGS_M := -bundle -undefined dynamic_lookup
-CFLAGS_L := -shared -fPIC
+CFLAGS_L := -shared -fPIC -lstdc++
 
 LIBBROTLIDEC_CFLAGS := -O2 -fPIC
 LIBBROTLIDEC_32 := libbrotlidec_32.a
